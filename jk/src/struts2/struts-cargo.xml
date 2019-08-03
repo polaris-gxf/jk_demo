@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<!-- 规则：大的功能点写类的名称，小的功能点写所在模块名称 -->
+	<package name="contract" namespace="/contract" extends="struts-default">
+		<action name="contractAction_*" method="{1}" class="cn.itcast.web.struts2.cargo.contract.ContractAction">
+			<result name="pview">/cargo/contract/jContractView.jsp</result>
+			<result name="plist">/cargo/contract/jContractList.jsp</result>
+			<result name="pcreate">/cargo/contract/jContractCreate.jsp</result>
+			<result name="pupdate">/cargo/contract/jContractUpdate.jsp</result>
+		</action>
+		
+		<!-- 货物 -->
+		<action name="contractProductAction_*" method="{1}" class="cn.itcast.web.struts2.cargo.contract.ContractProductAction">
+			<result name="plist">/cargo/contract/jContractProductList.jsp</result>
+			<result name="pcreate">/cargo/contract/jContractProductCreate.jsp</result>
+			<result name="pupdate">/cargo/contract/jContractProductUpdate.jsp</result>
+		</action>
+		
+		<!-- 附件 -->
+		<action name="extCproductAction_*" method="{1}" class="cn.itcast.web.struts2.cargo.contract.ExtCproductAction">
+			<result name="plist">/cargo/contract/jExtCproductList.jsp</result>
+			<result name="pcreate">/cargo/contract/jExtCproductCreate.jsp</result>
+			<result name="pupdate">/cargo/contract/jExtCproductUpdate.jsp</result>
+		</action>
+		
+		<!-- 出货表 -->
+		<action name="outProductAction_*" method="{1}" class="cn.itcast.web.struts2.cargo.contract.OutProductAction">
+		</action>
+		
+	</package>
+	
+	<!-- 出口报运 -->
+  	<package name="export" namespace="/export" extends="struts-default">
+  		<action name="exportAction_*" method="{1}" class="cn.itcast.web.struts2.cargo.export.ExportAction">
+  			<result name="plist">/cargo/export/jExportList.jsp</result>
+  			<result name="pview">/cargo/export/jExportView.jsp</result>
+  			<result name="pviewinfo">/cargo/export/jExportViewInfo.jsp</result>
+  			<result name="pupdate">/cargo/export/jExportUpdate.jsp</result>
+  		</action>
+  	</package>		
+	
+	<!-- 装箱-->
+  	<package name="packinglist" namespace="/packinglist" extends="struts-default">
+  		<action name="packingListAction_*" method="{1}" class="cn.itcast.web.struts2.cargo.packinglist.PackingListAction">
+  			<result name="plist">/cargo/packinglist/jPackingListList.jsp</result>
+  			<result name="pview">/cargo/packinglist/jPackingListView.jsp</result>
+  			<result name="pcreate">/cargo/packinglist/jPackingListCreate.jsp</result>
+  			<result name="pviewinfo">/cargo/packinglist/jPackingListViewInfo.jsp</result>
+  			<result name="pupdate">/cargo/packinglist/jPackingListUpdate.jsp</result>
+  		</action>
+  	</package>		
+</struts>	

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="basicinfo" location="0,0" size="300,100">
+    <action name="factoryAction_*" location="10,20" size="100,50" />
+  </package>
+</Struts2Diagram>
+
